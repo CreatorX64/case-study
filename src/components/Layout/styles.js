@@ -32,10 +32,12 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
+    overflow-x: hidden;
     font-family: "Nunito Sans", sans-serif;
   }
 
   body {
+    overflow-x: hidden;
     background-color: var(--color-gray-50);
   }
 

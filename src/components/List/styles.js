@@ -16,4 +16,8 @@ export const StyledList = styled.ul`
   & ${StyledListItem} {
     border-bottom: 1px solid var(--color-gray-200);
   }
+
+  @media (min-width: 500px) {
+    row-gap: 0;
+  }
 `;
