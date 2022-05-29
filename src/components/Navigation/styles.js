@@ -29,6 +29,7 @@ export const StyledNavigation = styled.nav`
     min-width: 44px;
     align-items: center;
     height: 100%;
+    color: var(--color-black);
     text-decoration: none;
   }
 

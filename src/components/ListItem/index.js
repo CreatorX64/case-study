@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import {
   StyledAddButton,
   StyledListItem,
@@ -7,6 +9,7 @@ import iconLocation from "icons/location.svg";
 import { useCartContext } from "context/cart";
 
 const ListItem = ({ item }) => {
+  const { t } = useTranslation();
   const { addToCart, removeFromCart, itemInCart } = useCartContext();
   const isItemInCart = itemInCart(item);
 
@@ -38,7 +41,9 @@ const ListItem = ({ item }) => {
             isItemInCart ? () => removeFromCart(item) : () => addToCart(item)
           }
         >
-          {isItemInCart ? "Remove from cart" : "Add to cart"}
+          {isItemInCart
+            ? t("c.listItem.removeFromCart")
+            : t("c.listItem.addToCart")}
         </StyledAddButton>
       </section>
     </StyledListItem>

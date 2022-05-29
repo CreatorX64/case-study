@@ -1,16 +1,27 @@
+import { useTranslation } from "react-i18next";
+
 import { StyledLocalePicker } from "components/LocalePicker/styles";
 import { useUserContext } from "context/user";
 
+const langs = {
+  en: { nativeName: "English" },
+  tr: { nativeName: "Türkçe" }
+};
+
 const LocalePicker = () => {
+  const { t } = useTranslation();
   const { locale, setLocale } = useUserContext();
 
   return (
     <StyledLocalePicker>
       <select value={locale} onChange={(e) => setLocale(e.target.value)}>
-        <option value="en">English</option>
-        <option value="tr">Türkçe</option>
+        {Object.keys(langs).map((lang) => (
+          <option key={lang} value={lang}>
+            {langs[lang].nativeName}
+          </option>
+        ))}
       </select>
-      <span>Locale</span>
+      <span>{t("c.localePicker.label")}</span>
     </StyledLocalePicker>
   );
 };

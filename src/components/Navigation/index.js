@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { useUserContext } from "context/user";
 import IconList from "icons/IconList";
@@ -9,6 +10,7 @@ import { StyledButton } from "components/styles";
 const Navigation = () => {
   const { user, logout } = useUserContext();
   const location = useLocation();
+  const { t } = useTranslation();
 
   const isProfilePage = location.pathname.includes("/account");
 
@@ -18,18 +20,20 @@ const Navigation = () => {
         <li>
           <NavLink to="/">
             <IconList />
-            <span>List</span>
+            <span>{t("c.navigation.list")}</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="/account">
             <IconUser />
-            <span>Account</span>
+            <span>{t("c.navigation.account")}</span>
           </NavLink>
         </li>
 
         {user && isProfilePage && (
-          <StyledButton onClick={logout}>Log Out</StyledButton>
+          <StyledButton onClick={logout}>
+            {t("c.navigation.logout")}
+          </StyledButton>
         )}
       </ul>
     </StyledNavigation>

@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect, createContext } from "react";
+import { useTranslation } from "react-i18next";
 
 const UserContext = createContext();
 
@@ -7,8 +8,9 @@ export const UserContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("user")) ?? null
   );
   const [locale, setLocale] = useState(
-    JSON.parse(localStorage.getItem("locale")) ?? "en"
+    localStorage.getItem("i18nextLng") ?? "en-US"
   );
+  const { i18n } = useTranslation();
 
   const logout = () => {
     setUser(null);
@@ -24,8 +26,8 @@ export const UserContextProvider = ({ children }) => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
   useEffect(() => {
-    localStorage.setItem("locale", JSON.stringify(locale));
-  }, [locale]);
+    i18n.changeLanguage(locale);
+  }, [locale, i18n]);
 
   const exposedState = {
     user,

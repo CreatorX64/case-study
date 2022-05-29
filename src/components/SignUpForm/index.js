@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { useUserContext } from "context/user";
 import LocalePicker from "components/LocalePicker";
@@ -13,6 +14,7 @@ const SignUpForm = () => {
   const [signUpLoading, setSignUpLoading] = useState(false);
   const { setUser } = useUserContext();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -49,7 +51,7 @@ const SignUpForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <span>E-mail</span>
+        <span>{t("c.signUpForm.email")}</span>
       </StyledLabelWithInput>
 
       <StyledLabelWithInput moveLabel={Boolean(password)}>
@@ -60,7 +62,7 @@ const SignUpForm = () => {
           minLength="9"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <span>Password</span>
+        <span>{t("c.signUpForm.password")}</span>
       </StyledLabelWithInput>
 
       <LocalePicker />
@@ -73,7 +75,7 @@ const SignUpForm = () => {
         isLoading={signUpLoading}
         disabled={signUpLoading || !email || !password}
       >
-        <span>Sign Up</span>
+        <span>{t("c.signUpForm.signUp")}</span>
         <img src={iconLoading} alt="Loading icon" aria-hidden="true" />
       </StyledButton>
     </StyledForm>
