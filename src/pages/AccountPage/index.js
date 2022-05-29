@@ -11,7 +11,7 @@ const AccountPage = () => {
       <Heading>Account</Heading>
 
       {/* If user is logged in show Profile, else show the sign up form.  */}
-      {user ? <Profile /> : <SignUpForm />}
+      {user ? <Profile user={user} /> : <SignUpForm />}
     </div>
   );
 };

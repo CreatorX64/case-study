@@ -1,8 +1,19 @@
-const Profile = () => {
+import LocalePicker from "components/LocalePicker";
+import { StyledWrapper } from "components/Profile/styles";
+
+const Profile = ({ user }) => {
   return (
-    <div>
-      <p>Profile component</p>
-    </div>
+    <StyledWrapper>
+      <h2>{user.fullName}</h2>
+
+      <section>
+        <p>Email: {user.email}</p>
+        <p>Password: {user.password}</p>
+        <p>Email: {user.email}</p>
+      </section>
+
+      <LocalePicker />
+    </StyledWrapper>
   );
 };
 

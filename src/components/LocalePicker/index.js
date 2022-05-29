@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { StyledLocalePicker } from "components/LocalePicker/styles";
+import { useUserContext } from "context/user";
 
 const LocalePicker = () => {
-  const [locale, setLocale] = useState("en");
+  const { locale, setLocale } = useUserContext();
 
   return (
     <StyledLocalePicker>

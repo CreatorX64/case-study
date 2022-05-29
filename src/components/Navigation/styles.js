@@ -1,3 +1,4 @@
+import { StyledButton } from "components/styles";
 import styled from "styled-components";
 
 export const StyledNavigation = styled.nav`
@@ -34,5 +35,11 @@ export const StyledNavigation = styled.nav`
     margin-top: auto;
     font-size: 12px;
     font-weight: 600;
+  }
+
+  & ${StyledButton} {
+    position: absolute;
+    width: calc(100% - 48px);
+    transform: translate(24px, calc(-100% - 18px));
   }
 `;
