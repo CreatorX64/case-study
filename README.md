@@ -26,4 +26,4 @@ Since implementing authentication was not part of the requirements, I decided to
 
 Upon sign up, there's no new user is created. You just get access to view the List page.
 
-To implement the mock API server, I used the npm module [json-server](https://www.npmjs.com/package/json-server) which exposes a full-blown REST API out of a mere JSON file.
+To implement the mock API server, I used the npm module [json-server](https://www.npmjs.com/package/json-server) which exposes a full-blown REST API out of a JSON file.
