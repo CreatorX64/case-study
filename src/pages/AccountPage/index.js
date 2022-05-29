@@ -1,5 +1,5 @@
 import { useUserContext } from "context/user";
-import LoginForm from "components/LoginForm";
+import SignUpForm from "components/SignUpForm";
 import { Heading } from "pages/AccountPage/styles";
 import Profile from "components/Profile";
 
@@ -10,7 +10,8 @@ const AccountPage = () => {
     <div>
       <Heading>Account</Heading>
 
-      {user ? <Profile /> : <LoginForm />}
+      {/* If user is logged in show Profile, else show the sign up form.  */}
+      {user ? <Profile /> : <SignUpForm />}
     </div>
   );
 };

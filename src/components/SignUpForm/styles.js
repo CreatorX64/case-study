@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
-export const StyledLoginForm = styled.form`
+export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 46px;
 `;
 
-export const Button = styled.button`
+export const StyledButton = styled.button`
   position: relative;
   display: block;
   width: 100%;
@@ -51,7 +51,7 @@ export const Button = styled.button`
     `}
 `;
 
-export const LabelWithInput = styled.label`
+export const StyledLabelWithInput = styled.label`
   display: block;
   position: relative;
 

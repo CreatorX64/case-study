@@ -11,6 +11,7 @@ const App = () => {
   return (
     <Layout>
       <Routes>
+        {/* User needs to sign up in order to view the ListPage */}
         <Route
           path="/"
           element={user ? <ListPage /> : <Navigate to="/account" />}

@@ -13,7 +13,7 @@ export const StyledNavigation = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    gap: 90px;
+    gap: 84px;
     width: max-content;
     height: 48px;
     padding: 0;
@@ -24,6 +24,7 @@ export const StyledNavigation = styled.nav`
   & a {
     display: flex;
     flex-direction: column;
+    min-width: 44px;
     align-items: center;
     height: 100%;
     text-decoration: none;

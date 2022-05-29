@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { useUserContext } from "context/user";
 import LocalePicker from "components/LocalePicker";
 import {
-  StyledLoginForm,
-  LabelWithInput,
-  Button
-} from "components/LoginForm/styles";
+  StyledForm,
+  StyledLabelWithInput,
+  StyledButton
+} from "components/SignUpForm/styles";
 import iconLoading from "icons/loading.svg";
 
-const LoginForm = () => {
+const SignUpForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signUpLoading, setSignUpLoading] = useState(false);
@@ -31,28 +31,28 @@ const LoginForm = () => {
   };
 
   return (
-    <StyledLoginForm onSubmit={handleSubmit}>
-      <LabelWithInput moveLabel={Boolean(email)}>
+    <StyledForm onSubmit={handleSubmit}>
+      <StyledLabelWithInput moveLabel={Boolean(email)}>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <span>E-mail</span>
-      </LabelWithInput>
+      </StyledLabelWithInput>
 
-      <LabelWithInput moveLabel={Boolean(password)}>
+      <StyledLabelWithInput moveLabel={Boolean(password)}>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <span>Password</span>
-      </LabelWithInput>
+      </StyledLabelWithInput>
 
       <LocalePicker />
 
-      <Button
+      <StyledButton
         primary
         isInvalid={!email || !password}
         isLoading={signUpLoading}
@@ -60,9 +60,9 @@ const LoginForm = () => {
       >
         <span>Sign Up</span>
         <img src={iconLoading} alt="Loading icon" aria-hidden="true" />
-      </Button>
-    </StyledLoginForm>
+      </StyledButton>
+    </StyledForm>
   );
 };
 
-export default LoginForm;
+export default SignUpForm;
