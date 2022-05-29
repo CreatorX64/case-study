@@ -16,6 +16,7 @@ export const StyledListItem = styled.li`
     height: 72px;
     border-radius: 12px;
     overflow: hidden;
+    filter: drop-shadow(0px 10px 15px #c8c9cd);
   }
 
   & figure::after {

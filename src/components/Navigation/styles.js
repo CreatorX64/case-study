@@ -35,7 +35,7 @@ export const StyledNavigation = styled.nav`
   & a span {
     margin-top: auto;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   & ${StyledButton} {
