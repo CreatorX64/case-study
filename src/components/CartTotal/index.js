@@ -2,8 +2,10 @@ import { useTranslation } from "react-i18next";
 
 import { useCartContext } from "context/cart";
 import { StyledWrapper } from "components/CartTotal/styles";
+import { useUserContext } from "context/user";
 
 const CartTotal = () => {
+  const { locale } = useUserContext();
   const { cartItems } = useCartContext();
   const { t } = useTranslation();
 
@@ -14,17 +16,22 @@ const CartTotal = () => {
   const taxesAndShipping = total === 0 ? 0 : 21.45;
   const grandTotal = total + taxesAndShipping;
 
+  const formatter = new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "TRY"
+  });
+
   return (
     <StyledWrapper>
       <h2>{t("c.cartTotal.totalOfProducts")}:</h2>
       <p className="subtotal">
-        {t("c.cartTotal.subtotal")}: {total.toFixed(2)} TL
+        {t("c.cartTotal.subtotal")}: {formatter.format(total)}
       </p>
       <p className="extras">
-        {t("c.cartTotal.taxesPlusShipping")}: {taxesAndShipping.toFixed(2)} TL
+        {t("c.cartTotal.taxesPlusShipping")}: {formatter.format(taxesAndShipping)}
       </p>
       <p className="grand">
-        {t("c.cartTotal.grandTotal")}: {grandTotal.toFixed(2)} TL
+        {t("c.cartTotal.grandTotal")}: {formatter.format(grandTotal)}
       </p>
     </StyledWrapper>
   );
