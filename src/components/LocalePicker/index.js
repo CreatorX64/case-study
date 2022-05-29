@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-import { StyledLocalePicker } from "components/LocalePicker/styles";
 import { useUserContext } from "context/user";
+import { StyledLocalePicker } from "components/LocalePicker/styles";
 
 const langs = {
   en: { nativeName: "English" },

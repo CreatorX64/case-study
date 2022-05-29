@@ -1,5 +1,5 @@
-import { StyledList } from "components/List/styles";
 import ListItem from "components/ListItem";
+import { StyledList } from "components/List/styles";
 
 const List = ({ items }) => {
   return (

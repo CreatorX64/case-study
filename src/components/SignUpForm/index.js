@@ -12,9 +12,9 @@ const SignUpForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signUpLoading, setSignUpLoading] = useState(false);
-  const { setUser } = useUserContext();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const { setUser } = useUserContext();
 
   const handleSubmit = (event) => {
     event.preventDefault();

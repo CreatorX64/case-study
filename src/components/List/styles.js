@@ -10,7 +10,7 @@ export const StyledList = styled.ul`
 
   /* Bottom borders in the Figma file were inconsistent, so I decided to add it
   to all elements except the last one. */
-  /* & ${StyledListItem}:not(:last-child) { */
+  /* & ${StyledListItem}:not(:last-child) { ... }*/
 
   /* But then, I changed my mind... */
   & ${StyledListItem} {

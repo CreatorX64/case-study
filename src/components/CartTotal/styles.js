@@ -10,8 +10,8 @@ export const StyledWrapper = styled.section`
 
   & .subtotal,
   & .extras {
-    font-size: 14px;
     margin: 12px 0;
+    font-size: 14px;
   }
 
   & .grand {

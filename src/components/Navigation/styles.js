@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 export const StyledNavigation = styled.nav`
   position: fixed;
-  z-index: 100;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+  z-index: 100;
   width: 100vw;
   min-height: 88px;
   color: var(--color-black);
@@ -18,19 +18,20 @@ export const StyledNavigation = styled.nav`
     gap: 84px;
     width: max-content;
     height: 48px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
-    margin-inline: auto;
     list-style: none;
   }
 
   & a {
     display: flex;
     flex-direction: column;
-    min-width: 44px;
     align-items: center;
+    min-width: 44px;
     height: 100%;
-    color: var(--color-black);
     text-decoration: none;
+    color: var(--color-black);
   }
 
   & a span {
@@ -47,10 +48,10 @@ export const StyledNavigation = styled.nav`
 
   @media (min-width: 500px) {
     position: static;
-    min-height: max-content;
-    padding: 20px 40px;
     display: flex;
     gap: 56px;
+    min-height: max-content;
+    padding: 20px 40px;
 
     & ul {
       width: 100%;

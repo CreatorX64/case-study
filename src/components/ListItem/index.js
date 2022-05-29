@@ -1,16 +1,17 @@
 import { useTranslation } from "react-i18next";
 
+import { useCartContext } from "context/cart";
 import {
   StyledAddButton,
   StyledListItem,
   StyledStar
 } from "components/ListItem/styles";
 import iconLocation from "icons/location.svg";
-import { useCartContext } from "context/cart";
 
 const ListItem = ({ item }) => {
   const { t } = useTranslation();
   const { addToCart, removeFromCart, itemInCart } = useCartContext();
+
   const isItemInCart = itemInCart(item);
 
   return (

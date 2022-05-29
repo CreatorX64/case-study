@@ -1,8 +1,8 @@
 import React from "react";
-import List from "components/List";
-import CartTotal from "components/CartTotal";
 
 import { StyledWrapper } from "pages/ListPage/styles";
+import List from "components/List";
+import CartTotal from "components/CartTotal";
 
 class ListPage extends React.Component {
   constructor(props) {

@@ -7,27 +7,27 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledLabelWithInput = styled.label`
-  display: block;
   position: relative;
+  display: block;
 
   & > span {
     position: absolute;
     top: 0;
     left: 0;
     transform: translateY(8px);
-    color: var(--color-gray-700);
     transition: all 400ms;
+    color: var(--color-gray-700);
   }
 
   & > input,
   & > select {
     display: block;
     width: 100%;
-    border: none;
-    font-weight: 600;
     outline: none;
+    border: none;
     border-bottom: 2px solid var(--color-gray-300);
     padding: 8px 0;
+    font-weight: 600;
   }
 
   & > select {

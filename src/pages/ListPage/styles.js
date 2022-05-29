@@ -11,7 +11,7 @@ export const StyledWrapper = styled.div`
 
   @media (min-width: 1010px) {
     max-width: 840px;
-    column-gap: 56px;
     grid-template-columns: 1fr max-content;
+    column-gap: 56px;
   }
 `;

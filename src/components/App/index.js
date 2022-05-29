@@ -1,9 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import { useUserContext } from "context/user";
-import Layout from "components/Layout";
-import ListPage from "pages/ListPage";
 import AccountPage from "pages/AccountPage";
+import ListPage from "pages/ListPage";
+import Layout from "components/Layout";
 
 const App = () => {
   const { user } = useUserContext();

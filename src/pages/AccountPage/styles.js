@@ -6,6 +6,6 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledHeading = styled.h1`
-  font-size: 32px;
   margin-bottom: 40px;
+  font-size: 32px;
 `;

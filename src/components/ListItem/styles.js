@@ -6,28 +6,29 @@ export const StyledListItem = styled.li`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
-  padding-block: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   & figure {
+    overflow: hidden;
     position: relative;
-    margin: 0;
     flex-shrink: 0;
     width: 72px;
     height: 72px;
+    margin: 0;
     border-radius: 12px;
-    overflow: hidden;
     filter: drop-shadow(0px 10px 15px #c8c9cd);
   }
 
   & figure::after {
     content: "";
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: 10;
+    display: block;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 40%,
@@ -37,9 +38,9 @@ export const StyledListItem = styled.li`
   }
 
   & figure img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transition: 400ms transform;
   }
 
@@ -58,15 +59,15 @@ export const StyledListItem = styled.li`
   }
 
   & section .description {
+    margin-bottom: 12px;
     font-size: 12px;
     color: var(--color-gray-700);
-    margin-bottom: 12px;
   }
 
   & section .info {
-    margin-bottom: 24px;
     display: flex;
     gap: 22px;
+    margin-bottom: 24px;
     font-size: 12px;
     color: var(--color-gray-900);
   }
@@ -87,13 +88,13 @@ export const StyledListItem = styled.li`
     }
 
     & section .title {
-      font-size: 20px;
       margin-bottom: 8px;
+      font-size: 20px;
     }
 
     & section .description {
-      font-size: 14px;
       margin-bottom: 16px;
+      font-size: 14px;
     }
 
     & section .info {
@@ -104,17 +105,17 @@ export const StyledListItem = styled.li`
 
 export const StyledAddButton = styled.button`
   border: none;
+  padding: 8px 8px 8px 28px;
+  letter-spacing: 0.9px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--color-primary);
   background: none;
   background-image: url("/add-to-basket.svg");
   background-repeat: no-repeat;
   background-position: left center;
-  padding: 8px 8px 8px 28px;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-size: 12px;
-  letter-spacing: 0.9px;
-  font-weight: 700;
-  color: var(--color-primary);
 
   @media (min-width: 500px) {
     font-size: 14px;

@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components/macro";
+import styled, { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 
 export const GlobalStyles = createGlobalStyle`
@@ -52,8 +52,6 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const LayoutWrapper = styled.div`
-  /* display: grid;
-  grid-template-rows: 1fr auto; */
   min-height: 100vh;
 
   & > main {

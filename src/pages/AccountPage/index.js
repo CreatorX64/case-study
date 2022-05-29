@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
+
 import { useUserContext } from "context/user";
 import { StyledHeading, StyledWrapper } from "pages/AccountPage/styles";
 import SignUpForm from "components/SignUpForm";
 import Profile from "components/Profile";
 
 const AccountPage = () => {
-  const { user } = useUserContext();
   const { t } = useTranslation();
+  const { user } = useUserContext();
 
   return (
     <StyledWrapper>

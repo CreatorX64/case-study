@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
 
+import { useUserContext } from "context/user";
 import { useCartContext } from "context/cart";
 import { StyledWrapper } from "components/CartTotal/styles";
-import { useUserContext } from "context/user";
 
 const CartTotal = () => {
+  const { t } = useTranslation();
   const { locale } = useUserContext();
   const { cartItems } = useCartContext();
-  const { t } = useTranslation();
 
   const total = cartItems.reduce(
     (total, currItem) => (total += Number(currItem.price)),
@@ -28,7 +28,8 @@ const CartTotal = () => {
         {t("c.cartTotal.subtotal")}: {formatter.format(total)}
       </p>
       <p className="extras">
-        {t("c.cartTotal.taxesPlusShipping")}: {formatter.format(taxesAndShipping)}
+        {t("c.cartTotal.taxesPlusShipping")}:{" "}
+        {formatter.format(taxesAndShipping)}
       </p>
       <p className="grand">
         {t("c.cartTotal.grandTotal")}: {formatter.format(grandTotal)}

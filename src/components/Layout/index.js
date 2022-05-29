@@ -1,5 +1,5 @@
-import { GlobalStyles, LayoutWrapper } from "components/Layout/styles";
 import Navigation from "components/Navigation";
+import { GlobalStyles, LayoutWrapper } from "components/Layout/styles";
 
 const Layout = ({ children }) => {
   return (
