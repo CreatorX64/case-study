@@ -12,11 +12,14 @@ export const UserContextProvider = ({ children }) => {
 
   const logout = () => {
     setUser(null);
+    localStorage.clear();
   };
 
   // Sync state with Local Storage. We wouldn't include sensitive info here
-  // in prod, this is just to make your job easier & to prevent re-logging
-  // everytime you refresh the page.
+  // in prod, plus we wouldn't verify whether a user is logged in by *just*
+  // checking Local Storage. We would probably verify a token through our
+  // auth API & store that in Local Storage. This is just to make your job
+  // easier & to prevent re-logging everytime you refresh the page.
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);

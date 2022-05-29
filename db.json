@@ -1,0 +1,49 @@
+{
+  "villas": [
+    {
+      "id": 0,
+      "name": "Villa Bosphorus",
+      "description": "New traditional 3-bed villa",
+      "rating": 5,
+      "distance": 3.7,
+      "price": 20.5,
+      "imageUrl": "https://ik.imagekit.io/htmlwow/projects/tapu-case-study/villa-2_IXlNbf10b.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653828014342"
+    },
+    {
+      "id": 1,
+      "name": "Luxury Alanya Villa - Sea Views",
+      "description": "Contemporary villa in Alanya",
+      "rating": 3.9,
+      "distance": 4,
+      "price": 50,
+      "imageUrl": "https://ik.imagekit.io/htmlwow/projects/tapu-case-study/villa-4_67coB4mos.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653828014807"
+    },
+    {
+      "id": 2,
+      "name": "Detached Luxury Ovacik Villa",
+      "description": "Refurbished new traditional 3-bed villa",
+      "rating": 3.2,
+      "distance": 1.2,
+      "price": 44.6,
+      "imageUrl": "https://ik.imagekit.io/htmlwow/projects/tapu-case-study/villa-1_vUBvx6yXG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653828014194"
+    },
+    {
+      "id": 3,
+      "name": "Modern Sea View Bektas Villa",
+      "description": "Modern 3-bed villa in Alanya for sale",
+      "rating": 4.2,
+      "distance": 3,
+      "price": 3.5,
+      "imageUrl": "https://ik.imagekit.io/htmlwow/projects/tapu-case-study/villa-5_aN4yDP1on.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653828014850"
+    },
+    {
+      "id": 4,
+      "name": "Alanya Sea & Castle View Villa",
+      "description": "Detached 4-bed luxury villa in Alanya",
+      "rating": 2.3,
+      "distance": 18.3,
+      "price": 99,
+      "imageUrl": "https://ik.imagekit.io/htmlwow/projects/tapu-case-study/villa-3_xZvfsr5Jg.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653828014429"
+    }
+  ]
+}
