@@ -14,10 +14,6 @@ const Navigation = () => {
 
   return (
     <StyledNavigation>
-      {user && isProfilePage && (
-        <StyledButton onClick={logout}>Log Out</StyledButton>
-      )}
-
       <ul>
         <li>
           <NavLink to="/">
@@ -31,6 +27,10 @@ const Navigation = () => {
             <span>Account</span>
           </NavLink>
         </li>
+
+        {user && isProfilePage && (
+          <StyledButton onClick={logout}>Log Out</StyledButton>
+        )}
       </ul>
     </StyledNavigation>
   );

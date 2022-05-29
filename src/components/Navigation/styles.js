@@ -41,6 +41,39 @@ export const StyledNavigation = styled.nav`
   & ${StyledButton} {
     position: absolute;
     width: calc(100% - 48px);
-    transform: translate(24px, calc(-100% - 18px));
+    transform: translateY(calc(-130% - 18px));
+  }
+
+  @media (min-width: 500px) {
+    position: static;
+    min-height: max-content;
+    padding: 20px 40px;
+    display: flex;
+    gap: 56px;
+
+    & ul {
+      width: 100%;
+      max-width: 1024px;
+      height: 52px;
+      justify-content: flex-end;
+      gap: 48px;
+    }
+
+    & a {
+      min-width: 64px;
+    }
+
+    & a span {
+      font-size: 16px;
+    }
+
+    & ${StyledButton} {
+      /* position: static; */
+      width: auto;
+      /* align-self: center; */
+      padding: 12px 24px;
+      /* flex-shrink: 0; */
+      transform: translateY(calc(210% + 12px));
+    }
   }
 `;

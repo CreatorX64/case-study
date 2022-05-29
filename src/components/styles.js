@@ -8,6 +8,7 @@ export const StyledButton = styled.button`
   width: 100%;
   border: 1px solid var(--color-primary);
   border-radius: 12px;
+  cursor: pointer;
   font-weight: 700;
   font-size: 14px;
   outline: none;
@@ -45,4 +46,8 @@ export const StyledButton = styled.button`
       color: var(--color-white);
       background-color: var(--color-primary);
     `}
+
+  @media (min-width: 500px) {
+    font-size: 16px;
+  }
 `;

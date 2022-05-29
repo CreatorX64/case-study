@@ -13,4 +13,10 @@ export const StyledWrapper = styled.div`
     border-bottom: 1px solid var(--color-gray-300);
     margin-bottom: 44px;
   }
+
+  @media (min-width: 500px) {
+    & section {
+      font-size: 16px;
+    }
+  }
 `;

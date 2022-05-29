@@ -7,8 +7,8 @@ const Layout = ({ children }) => {
       <GlobalStyles />
 
       <LayoutWrapper>
-        <main>{children}</main>
         <Navigation />
+        <main>{children}</main>
       </LayoutWrapper>
     </>
   );

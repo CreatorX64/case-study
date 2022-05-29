@@ -21,7 +21,7 @@
     {
       "id": 2,
       "name": "Detached Luxury Ovacik Villa",
-      "description": "Refurbished new traditional 3-bed villa",
+      "description": "Refurbished traditional 3-bed",
       "rating": 3.2,
       "distance": 1.2,
       "price": 44.6,
@@ -30,7 +30,7 @@
     {
       "id": 3,
       "name": "Modern Sea View Bektas Villa",
-      "description": "Modern 3-bed villa in Alanya for sale",
+      "description": "Modern 3-bed villa in Alanya",
       "rating": 4.2,
       "distance": 3,
       "price": 3.5,
@@ -39,7 +39,7 @@
     {
       "id": 4,
       "name": "Alanya Sea & Castle View Villa",
-      "description": "Detached 4-bed luxury villa in Alanya",
+      "description": "Detached 4-bed luxury",
       "rating": 2.3,
       "distance": 18.3,
       "price": 99,

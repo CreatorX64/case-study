@@ -9,10 +9,15 @@ export const StyledAddButton = styled.button`
   background-position: left center;
   padding: 8px 8px 8px 28px;
   text-transform: uppercase;
+  cursor: pointer;
   font-size: 12px;
   letter-spacing: 0.9px;
   font-weight: 700;
   color: var(--color-primary);
+
+  @media (min-width: 500px) {
+    font-size: 14px;
+  }
 `;
 
 export const StyledStar = styled.span`
@@ -46,6 +51,11 @@ export const StyledStar = styled.span`
         transform: translateY(${100 - (props.rating / 5) * 100}%);
       `}
   }
+
+  @media (min-width: 500px) {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 export const StyledListItem = styled.li`
@@ -58,6 +68,7 @@ export const StyledListItem = styled.li`
   & figure {
     position: relative;
     margin: 0;
+    flex-shrink: 0;
     width: 72px;
     height: 72px;
     border-radius: 12px;
@@ -115,5 +126,29 @@ export const StyledListItem = styled.li`
     display: flex;
     align-items: center;
     gap: 4px;
+  }
+
+  @media (min-width: 500px) {
+    gap: 24px;
+    padding-block: 24px;
+
+    & figure {
+      width: 160px;
+      height: 160px;
+    }
+
+    & section .title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    & section .description {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    & section .info {
+      font-size: 14px;
+    }
   }
 `;
